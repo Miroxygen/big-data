@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "mTbLkcftkBhn7EHE382voEADNE8O1hCmeuPR/n0WSv1ujaLtKQGC0EbOW7IduVBaoeiipGZDDjBK+yUdJuiPjQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\miranda\\Documents\\WSAP\\BigData\\BigDataApi\\assignment-wt2-oauth\\assignment-wt2-oauth.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\miranda\\.nuget\\packages\\dotenv.net\\3.1.2\\dotenv.net.3.1.2.nupkg.sha512",
+    "C:\\Users\\miranda\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\miranda\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\miranda\\.nuget\\packages\\restsharp\\110.2.0\\restsharp.110.2.0.nupkg.sha512",
+    "C:\\Users\\miranda\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
+    "C:\\Users\\miranda\\.nuget\\packages\\system.text.json\\7.0.2\\system.text.json.7.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
