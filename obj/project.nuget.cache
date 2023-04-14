@@ -1,13 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "mTbLkcftkBhn7EHE382voEADNE8O1hCmeuPR/n0WSv1ujaLtKQGC0EbOW7IduVBaoeiipGZDDjBK+yUdJuiPjQ==",
+  "dgSpecHash": "mrtphlx9eI+WjkHjllpMMi0OPo6I8TWhyc+cQyFDu5KbzjnU+awbQj9BaiP62+4/c7V53fVPrpXMjTgorspYaQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\miranda\\Documents\\WSAP\\BigData\\BigDataApi\\assignment-wt2-oauth\\assignment-wt2-oauth.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\miranda\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
     "C:\\Users\\miranda\\.nuget\\packages\\dotenv.net\\3.1.2\\dotenv.net.3.1.2.nupkg.sha512",
+    "C:\\Users\\miranda\\.nuget\\packages\\elasticsearch.net\\7.17.5\\elasticsearch.net.7.17.5.nupkg.sha512",
+    "C:\\Users\\miranda\\.nuget\\packages\\microsoft.csharp\\4.6.0\\microsoft.csharp.4.6.0.nupkg.sha512",
     "C:\\Users\\miranda\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\miranda\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\miranda\\.nuget\\packages\\nest\\7.17.5\\nest.7.17.5.nupkg.sha512",
+    "C:\\Users\\miranda\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\miranda\\.nuget\\packages\\restsharp\\110.2.0\\restsharp.110.2.0.nupkg.sha512",
+    "C:\\Users\\miranda\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\miranda\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512",
     "C:\\Users\\miranda\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\miranda\\.nuget\\packages\\system.text.json\\7.0.2\\system.text.json.7.0.2.nupkg.sha512"
   ],

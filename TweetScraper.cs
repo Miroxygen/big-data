@@ -1,3 +1,4 @@
+using System.Text;
 using RestSharp;
 
 namespace assignment_wt2_oauth
@@ -18,12 +19,16 @@ namespace assignment_wt2_oauth
         }
     public async Task GetData()
     {
-      var restClient = new RestClient("https://www.kaggle.com/api/v1/datasets/download/edomingo/chatgpt-1000-daily-tweets");
+      var restClient = new RestClient("https://www.kaggle.com/api/v1");
+
+      //var restClient = new RestClient("https://www.kaggle.com/api/v1/datasets/download/edomingo/chatgpt-1000-daily-tweets?username=" + _kaggleUsername  + "&key=" + _kaggleApiKey);
 
       var data = new List<object>();
 
-      var request = new RestRequest();
-            request.AddHeader("Authorization", $"Bearer {_kaggleApiKey}");
+      var request = new RestRequest("/datasets/download/edomingo/chatgpt-1000-daily-tweets", Method.Get);
+      var authString = $"{_kaggleUsername}:{_kaggleApiKey}";
+      var encodedAuthString = Convert.ToBase64String(Encoding.ASCII.GetBytes(authString));
+      request.AddHeader("Authorization", $"Basic {encodedAuthString}");
 
       var response = await restClient.ExecuteGetAsync(request);
 
@@ -34,6 +39,8 @@ namespace assignment_wt2_oauth
       var desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
       
       var filePath = Path.Combine(desktopPath, _datasetName + ".zip");
+
+      Console.WriteLine(response);
 
       using (var fileStream = new FileStream(filePath, FileMode.Create))
       {

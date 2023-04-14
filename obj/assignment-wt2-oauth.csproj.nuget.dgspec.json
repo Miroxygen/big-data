@@ -38,9 +38,21 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[30.0.1, )"
+            },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "NEST": {
+              "target": "Package",
+              "version": "[7.17.5, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "RestSharp": {
               "target": "Package",
