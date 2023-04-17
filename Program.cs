@@ -6,12 +6,15 @@ using Elasticsearch.Net;
 
 DotEnv.Load();
 
-var connectionSettings = new ConnectionSettings(new Uri("https://localhost:9200"));
+/*var connectionSettings = new ConnectionSettings(new CloudId(Environment.GetEnvironmentVariable("ELASTIC_CLOUD_ID")));
 connectionSettings.DisableDirectStreaming();
 connectionSettings.BasicAuthentication("elastic", Environment.GetEnvironmentVariable("ELASTIC_PASSWORD"));
 connectionSettings.ServerCertificateValidationCallback(CertificateValidations.AllowAll);
+var elasticClient = new ElasticClient(connectionSettings);*/
 
-var elasticClient = new ElasticClient(connectionSettings);
+var pool = new CloudConnectionPool(Environment.GetEnvironmentVariable("ELASTIC_CLOUD_ID"), new BasicAuthenticationCredentials("elastic", Environment.GetEnvironmentVariable("ELASTIC_PASSWORD")));
+var settings = new ConnectionSettings(pool);
+var elasticClient = new ElasticClient(settings);
 
 var serviceProvider = new ServiceCollection()
       .AddSingleton<TweetScraper>()
