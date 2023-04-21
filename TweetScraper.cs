@@ -20,9 +20,7 @@ namespace assignment_wt2_oauth
     public async Task GetData()
     {
       var restClient = new RestClient("https://www.kaggle.com/api/v1");
-
-      //var restClient = new RestClient("https://www.kaggle.com/api/v1/datasets/download/edomingo/chatgpt-1000-daily-tweets?username=" + _kaggleUsername  + "&key=" + _kaggleApiKey);
-
+      
       var data = new List<object>();
 
       var request = new RestRequest("/datasets/download/edomingo/chatgpt-1000-daily-tweets", Method.Get);

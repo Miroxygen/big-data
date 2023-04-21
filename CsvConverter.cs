@@ -12,7 +12,7 @@ namespace assignment_wt2_oauth
 {
     public class CsvConverter
     {
-        public List<Data> convertCsvFileToJson()
+        public List<Data> convertCsvToObjects()
         {
           var reader = new StreamReader("chatgpt_daily_tweets.csv");
           var csvReader = new CsvReader(reader, System.Globalization.CultureInfo.InvariantCulture);
