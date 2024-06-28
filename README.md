@@ -1,26 +1,64 @@
-# Assignment WT - Big Data
+# Kaggle Twitter Data Scraper and Elasticsearch Integration
 
-As developers, we often face challenges handling large amounts of data where runtime execution or ordinary databases do not meet the requirements.
-We might also have APIs with basic CRUD operations where we might want to query, aggregate, and visualize the data in other ways than the API intended. This is where the query engine Elasticsearch comes into play. Elasticsearch should not be seen as a database, but as a query engine. The data in Elasticsearch should always be replaceable and be able to be recreated.
-Elasticsearch and similar query engines allow developers to create indexes from data and use the data in new ways that usually would have taken significant rewriting of applications.
+This project scrapes Twitter data from Kaggle, processes it, and stores it in an Elasticsearch instance. It provides functionalities to download data from Kaggle, convert CSV data to objects, and index this data into Elasticsearch.
 
-## The assignment
+## Core Functionalities
 
-Find a bigger _dataset_ and visualize something that you find interesting from the dataset. The visualization should be presented in a publicly reachable web application in the form of a diagram.
+  -  Download Data: Scrape and download a dataset from Kaggle using Kaggle's API.
+ -   CSV Conversion: Convert downloaded CSV data into .NET objects.
+ -   Data Indexing: Index the processed data into an Elasticsearch instance.
+ -   Data Retrieval: Retrieve indexed data from Elasticsearch.
 
-You can find datasets at https://www.kaggle.com/datasets, but you are free to explore and find something else. The dataset needs to be a minimum of 1000 datapoints.
+### Technologies Used
 
-It is recommended that you develop in the following steps:
+ -   .NET 7.0: Main framework for building the application.
+ -   Kaggle API: For downloading datasets.
+ -   CSVHelper: For converting CSV data into .NET objects.
+ -   Elasticsearch: For storing and retrieving data.
+ -   Nest: Elasticsearch client for .NET.
+ -   RestSharp: For making HTTP requests to Kaggle's API.
+  -  dotenv.net: For managing environment variables.
 
-1) Browse around to find a dataset
-2) Write an application that gathers the data needed from the API and saves it in Elasticsearch
-3) Use Kibana to find an interesting visualization
-4) Write a web application with the visualization (#11)
-5) Deploy the web application (#7)
+## Project Structure
 
-## Requirements
+  -  AddToElastic.cs: Handles the indexing of data into Elasticsearch.
+   - CsvConverter.cs: Converts CSV data into .NET objects.
+ -   Data.cs: Model class representing the structure of the data.
+  -  GetFromElastic.cs: Provides methods to retrieve data from Elasticsearch.
+  -  TweetScraper.cs: Downloads data from Kaggle.
+  -  ZipFileDownloader.cs: Extracts downloaded ZIP files.
+  -  Program.cs: Sets up dependency injection and runs the data processing and indexing workflow.
 
-Make sure to read [all requirements of the application](../../issues/). This includes: (#1, #2, #3, #4, #5, #6, #7, #8, #9, #10, #11)
-Pay extra attention to the labels indicating if the requirement is required (~"req::required") or optional (~"req::optional").
+## Setup
 
-In this assignment, you must close issues and tasks ([ ]) that you implement. You must also create your issues (and close them) if you add any functionality.
+  1. Clone the repository.
+
+2. Install dependencies:
+
+   -   Ensure you have .NET 7.0 SDK installed.
+
+3. Set up environment variables in a .env file.
+
+4. Run the application:
+
+    -  dotnet run
+
+## Environment Variables
+
+-    ELASTIC_CLOUD_ID: The ID of your Elastic Cloud instance.
+-    ELASTIC_PASSWORD: The password for your Elastic Cloud instance.
+-    KAGGLE_USERNAME: Your Kaggle username.
+-    KAGGLE_API_KEY: Your Kaggle API key.
+
+## Dependencies
+
+-    CsvHelper: 30.0.1
+-    dotenv.net: 3.1.2
+-    Microsoft.Extensions.DependencyInjection: 7.0.0
+-    NEST: 7.17.5
+-    Newtonsoft.Json: 13.0.3
+-    RestSharp: 110.2.0
+
+## License
+
+This project is licensed under the MIT License.
